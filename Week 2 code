@@ -1,0 +1,102 @@
+# Warm_up 2 string_times
+def string_times(str, n):
+  answer = ""
+  for i in range(n):
+    answer = answer + str
+  return answer
+#Warm_up 2 front_times
+def front_times(str, n):
+  front_len = 3
+  if front_len > len(str):
+    front_len = len(str)
+  realfront = str[:front_len]
+  
+  result = ""
+  for i in range(n):
+    result = result + realfront
+  return result
+  #warm_up 2 string_bits
+  def string_bits(str):
+  result = ""
+  for i in range(len(str)):
+    if i % 2 == 0:
+      result = result + str[i]
+  return result
+  # list 2 count evens
+  def count_evens(nums):
+  answer = 0
+  for i in nums:
+    if i % 2 == 0:
+      answer = answer + 1
+  return answer
+# list 2 big diff
+def big_diff(nums):
+  result = max(nums) -min(nums)
+  return result
+# list 2 sum13
+def sum13(nums):
+  result = 0
+  if len(nums) > 0 and nums[0] != 13:
+    result = nums[0]
+  for i in range(1,len(nums),1):
+    if nums[i] != 13 and nums[i-1] != 13:
+      result = result +nums[i]
+  return result
+# string-2 double_char
+def double_char(str):
+  result = ""
+  for i in range(len(str)):
+    result = result + str[i] + str[i]
+  return result
+# string-2 count-hi
+def count_hi(str):
+  result = 0
+  for i in range(len(str)-1):
+    a = str[i:i+2]
+    if a == "hi":
+      result = result + 1
+  return result
+  # string-2 
+  def cat_dog(str):
+  result = ""
+  ccount = 0
+  dcount = 0
+  for i in range(len(str)):
+    a = str[i:i+3]
+    b = str[i:i+3]
+    if a =="cat":
+      ccount = ccount + 1
+    if b == "dog":
+      dcount = dcount + 1
+  if ccount == dcount:
+    return True
+  else:
+    return False
+# logic-2 make_bricks
+def make_bricks(small, big, goal):
+  if (small + big*5)< goal:
+    return False
+  if goal % 5 > small:
+    return False
+  return True
+  # logic-2 lucky_sum
+  def lucky_sum(a, b, c):
+  result = 0
+  if a == 13:
+    result = 0
+  elif b == 13:
+    result = result + a
+  elif c == 13:
+    result = result + a + b
+  else:
+    result = result + a + b + c
+  return result
+#logic 2 lone sum
+def lone_sum(a, b, c):
+  sum = 0
+  if a != b and a != c: sum += a
+  if b != a and b != c: sum += b
+  if c != a and c != b: sum += c
+  
+  return sum
+
